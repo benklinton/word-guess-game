@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: xx-large;
+}
+.gameContent {
+    text-align: center;
+    border-style: double;
+    border-width: 7px;
+    border-color: black;
+    font-family: 'PT Sans', sans-serif;
+}
+.img1 {
+    position: absolute;
+    right: 75%;
+    bottom: 30%;
+}
+.img2 {
+    position: absolute;
+    left: 75%;
+    bottom: 30%;
+}
