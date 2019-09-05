@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900i|PT+Sans:400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900i|PT+Sans:400i&display=swap"
+        rel="stylesheet">
+    <script src="assets/javascript/game.js">
+    </script>
     <title>
         Word Guess Game
     </title>
@@ -16,21 +20,27 @@
             Music Hangman
         </h1>
     <div class="gameContent">
-    <h3>
-        Press any key to get started
-    </h3>
-    <img class="img1" src="https://www.placecage.com/200/200" alt="Filler">
-    <img class="img2" src="https://www.placecage.com/200/200" alt="Filler">
-    <h5>
-        Wins
-    </h5>
-    <h5>
-        Number of guess remaining
-    </h4>
-    <h5>
-        letters already guessed
-    </h5>
+        <h3>
+            Press any key to get started
+        </h3>
+        <div id="space"></div>
+        <img class="img1" src="https://www.placecage.com/200/200" alt="Filler">
+        <img class="img2" src="https://www.placecage.com/200/200" alt="Filler">
+        <h5>
+            Wins
+        </h5>
+        <div id="wins"></div>
+        <h5>
+            Number of guess remaining
+            </h4>
+            <div id="guessRemain"></div>
+            <h5>
+                letters already guessed
+            </h5>
+            <div id="lettersGuessed"></div>
+            <br>
     </div>
+    <br>
 </body>
 
 </html>

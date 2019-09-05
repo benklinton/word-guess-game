@@ -1,7 +1,12 @@
+body {
+    background: rgb(5,17,142);
+    background: radial-gradient(circle, rgba(5,17,142,0.9976365546218487) 8%, rgba(95,124,203,1) 62%, rgba(148,187,233,1) 100%);
+}
 .title {
     text-align: center;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: xx-large;
+    color: #9494b8;
 }
 .gameContent {
     text-align: center;
@@ -13,10 +18,19 @@
 .img1 {
     position: absolute;
     right: 75%;
-    bottom: 30%;
+    bottom: 20%;
 }
 .img2 {
     position: absolute;
     left: 75%;
-    bottom: 30%;
+    bottom: 20%;
+}
+#wins {
+    text-align: center;
+}
+#guessRemaining {
+    text-align: center;
+}
+#lettersGuessed {
+    text-align: center;
 }
