@@ -3,7 +3,7 @@ window.onload = function () {
 };
 var guessRemain = 10;
 var wins = 0;
-var words = ["beatles", "bleachers", "walk the moon", "killers"];
+var words = ["beatles", "bleachers", "santana", "killers", "weezer","offspring","queen"];
 var chooseWord = words[Math.floor(Math.random() * words.length)];
 var blankSpace = [];
 //Function picks word then displays length in dashes
