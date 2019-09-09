@@ -3,7 +3,7 @@ window.onload = function () {
 };
 var guessRemain = 10;
 var wins = 0;
-var words = ["ryan", "ryan", "ryan", "ryan"];
+var words = ["beatles", "bleachers", "walk the moon", "killers"];
 var chooseWord = words[Math.floor(Math.random() * words.length)];
 var blankSpace = [];
 //Function picks word then displays length in dashes
@@ -22,24 +22,22 @@ var gameMechanics = function () {
 
 
     //Function that takes users input and displays it on screen
-    document.onkeypress = function () {
+    document.onkeyup = function () {
         var pressedKey = event.key
         var once = false;
         for ( var j = 0; j < chooseWord.length; j++) {
-           var wordSplice = blankSpace.splice(j,j,chooseWord[j]);
-           var wordJoin = wordSplice.join(blankSpace);
-           var wordFinal = wordJoin;
+            console.log("start for");
             if (chooseWord[j] === pressedKey) {
-                document.getElementById("space").innerHTML = wordFinal;
-                console.log(wordPosition);
-            }
-           else  if (once === false) {
                 once = true;
-                guessRemain--;
-                document.getElementById("lettersGuessed").innerHTML += pressedKey;
-                document.getElementById("guessRemain").innerHTML = guessRemain;
-            
+                blankSpace[j] = pressedKey
+                document.getElementById("space").innerHTML = blankSpace.join("");
+                console.log("if");
             }
+        }
+        if (once === false) {
+            guessRemain--;
+            document.getElementById("lettersGuessed").innerHTML += pressedKey;
+            document.getElementById("guessRemain").innerHTML = guessRemain;
         }
         
             //Lose Condition
@@ -47,7 +45,16 @@ var gameMechanics = function () {
                 alert("You Lose. Try Again");
                 location.reload();
             }
+            if (blankSpace.join("") === chooseWord) {
+                wins++
+                document.getElementById("wins").innerHTML = wins;
+                alert("You Win")
+                gameMechanics();
+                newguessRemain =10;
+                document.getElementById("guessRemain").innerHTML = newguessRemain;
+
+            }
+            
     }
 };
-
 
